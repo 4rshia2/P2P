@@ -1,0 +1,159 @@
+/* ------------------------------*/
+/* Basic Setup */
+/* ------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	color: #555;
+	font-family: 'Lato' , 'Arial';
+	font-size: 20px;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+}
+/* ------------------------------*/
+/* Reusable Components */
+/* ------------------------------*/
+.row {
+	max-width: 70%;
+	margin: 0 auto;
+}
+
+.main-text-box {
+	position: absolute;
+	width: 70%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-32% , -103%);
+}
+/* ------------------------------*/
+/* Buttons  */
+/* ------------------------------*/
+.btn:link ,
+.btn:visited {
+	display: inline-block;
+	padding: 10px 30px;
+	font-weight: 300;
+	border-radius: 200px;
+	text-decoration: none;
+	border:1px solid #2a81fa;
+	transition: background-color 0.2s , border 0.2s , color 0.2s;
+}
+
+.btn-full:link ,
+.btn-full:visited {
+	background-color: #2a81fa;
+	color: #fff;
+}
+
+.btn-ghost:link ,
+.btn-ghost:visited {
+	border:1px solid #2a81fa;
+	color: #2a81fa;
+}
+
+.btn:hover , 
+.btn:active {
+	background-color: #0255c9;
+}
+
+.btn-full:hover ,
+.btn-full:active {
+	border : 1px solid #0255c9;
+}
+
+.btn-ghost:hover ,
+.btn-ghost:active {
+	border : 1px solid #0255c9;
+	color: #fff;
+}
+/* ------------------------------*/
+/* Header */
+/* ------------------------------*/
+
+header {
+	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)) ,url(image/logo.jpg);
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 240%;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;  
+	word-spacing: 4px;
+}
+
+.logo {
+	height: 100px;
+	width: auto;
+	float: left;
+	margin-top: 20px;
+}
+
+.main-nav {
+	float: right;
+	list-style: none;
+	margin-top: 55px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.main-nav li a {
+	padding: 8px 0px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.2s;
+} 
+.main-nav li a:hover {
+	border-bottom: 2px solid #2a81fa;
+}
+
+/*--------------------------------*/
+/* Responsive Design--------------*/
+/*--------------------------------*/
+@media only screen and (max-width: 900px) {
+	.main-text-box {
+		transform: translate(-32% , -85%);
+	}
+	h1 {
+		font-size: 190%;
+	}
+
+	.main-nav {
+		font-size: 85%;
+		margin-top: 30px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.main-text-box {
+		transform: translate(-31% , -79%);
+	}
+	h1 {
+		font-size: 150%;
+	}
+	header {
+		background-size: 100% 100%;
+	}
+	.main-nav li a {
+		font-size: 75%;
+		margin-top: 20px;
+	}
+}
