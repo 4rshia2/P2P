@@ -22,7 +22,7 @@ input[type="text"] {
 	width: 50%;
 	padding: 12px 20px;
 	margin: 300px auto;
-	margin-left: 50px ;
+	margin-left: 75px ;
 	border-radius: 2px;
 	box-sizing: border-box;
 }
@@ -43,6 +43,7 @@ input[type="text"] {
 .btn:hover , 
 .btn:active {
 	background-color: #0255c9;
+	color: #fff;
 }
 .back{
 	position: absolute;
@@ -52,8 +53,34 @@ input[type="text"] {
 	background-color: #db2121;
 	color: #fff;
 	border:1px solid #9c1414;
+	text-decoration: none;
+	border-radius: 200px;
+	transition: background-color 0.2s , border 0.2s , color 0.2s;
 }
 .back:hover {
 	background-color: #690606;
+}
+
+@media only screen and (max-width: 730px) {
+	input {
+		transform: translate(72px , -18px);
+	}
+
+	header {
+		background-size: 110% 130%;
+		overflow: hidden;
+	}
+	.btn {
+		display: block;
+		margin:8px 10px;
+		transform: translate(133px,-322px);
+	}
+	.back {
+		display: block;
+		position: relative;
+		width: 110px;
+		text-align: center;
+		transform: translate(0,-75px);
+	}
 }
 
